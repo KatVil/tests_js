@@ -10,8 +10,22 @@
 */
 
 const sumOfIntegers = (start, end) => {
-    /* Тут код*/
-
+    let sum = 0;
+    if (start < end){
+        let i = start + 1;
+        while (i < end) {
+            sum +=i;
+            i++;
+        }}
+    else if(start > end){
+        let i = end + 1;
+        while (i < start) {
+            sum +=i;
+            i++;
+        }
+    }
+  return sum;
 }
+ console.log(sumOfIntegers(15,10));
 
 module.exports = sumOfIntegers

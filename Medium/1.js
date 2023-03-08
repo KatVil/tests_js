@@ -5,8 +5,7 @@
 */
 
 const logEachLetter = (str) => {
-    /* Тут код*/
-
+    return str.toString().split('');
 }
-
-module.exports = logEachLetter
+console.log(logEachLetter('Котик умывается лапками'));
+module.exports = logEachLetter;

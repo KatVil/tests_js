@@ -5,11 +5,11 @@
 Пример: () => [ 0, 1, 2, 2, 7, 4, 3, 2, 6, 3 ]
 
 */
-
-const randomArr = () => {
-    /* Тут код*/
-
+/*function randomNumbersArray(length = 10) {
+    return Array.from(Array(length), () => Math.floor(Math.random() * 100) + 1);
+  }*/
+const randomArr = (length = 10) => {
+    return Array.from(Array(length), () => Math.floor(Math.random() * 10) + 1);
 }
-
-
+console.log(randomArr());
 module.exports = randomArr

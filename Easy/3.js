@@ -13,20 +13,15 @@ const nestedArr = (arr, number) => {
 
 */ 
 const nestedArr = (arr, number) => {
-    // проходим по элементам «внешнего» массива
-for(let i = 0; i < arr.length; i++){
-
-    // вычисляем длину «внутреннег» массива
-    let innerArrayLength = arr[i].length;
-    
-    // проходим по элементам «внутреннего» массива
-    for(let j = 0; j < innerArrayLength; j++) {
+    let index;
+    for(let i = 0; i < arr.length; i++){
         if (arr[i].includes(number)){
-        console.log(arr[i]);
-        return j;
-        }
+            console.log(arr[i]);
+            index = i;
     }
-}}
+}
+return index;
+}
 
 console.log(nestedArr(( [[1], [2, 3], [4]], 3 ), 1));
 

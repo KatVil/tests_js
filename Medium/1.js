@@ -5,7 +5,10 @@
 */
 
 const logEachLetter = (str) => {
-    return str.toString().split('');
+   for (let i of str){
+    console.log(i);
+   }
+    // return str.toString().split('');
 }
 console.log(logEachLetter('Котик умывается лапками'));
 module.exports = logEachLetter;

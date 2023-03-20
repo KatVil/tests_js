@@ -12,20 +12,20 @@
 */
 let arr = [ 'one', 'two', 'three' ];
 const longestString = (arr) => {
-  let longest = arr[0];
+  let longestEl = arr[0];
+  let max = 0;
+  if (arr.length === 0) return null
   for(let i = 0; i < arr.length; i++){
-    if((arr[i].length > longest) && (arr!=null)){
-        longest = arr[i];
-        console.log('????');
+    if(arr[i].length > max){
+        max = arr[i].length;
+        longestEl = arr[i];
+        //console.log('????');
     }
-    else if (arr==[]){
-        longest = null;
-    }
-    else if (arr[i]===arr[(i-1)]){
-        longest = arr[(i-1)];
+    else if (arr[i].length===arr[(i-1)].length){
+        longestEl = arr[(i-1)];
     }
   }
-  return longest;
+  return longestEl;
 }
 console.log(longestString([ 'one', 'two', 'three' ]));
 module.exports = longestString

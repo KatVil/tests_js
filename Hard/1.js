@@ -12,7 +12,9 @@
 */
 
 const validTriangle = (a, b, c) => {
-    if (a + b >= c) {
+    return a + b > c && c + b > a && a + c > b ;
+}
+   /* if (a + b >= c) {
         if (b + c >= a)
             if ((a + c >= b)&&(a!=0)&&(b!=0)&&(c!=0)){
                 return true;
@@ -23,10 +25,10 @@ const validTriangle = (a, b, c) => {
             
             else if ((a===0)&&(b===0)&&(c===0)){
                 return(false);
-            }*/
-    return false;
-}
-}
+            }
+    return false;*/
+
+
 
 console.log(validTriangle(6,2,8))
 

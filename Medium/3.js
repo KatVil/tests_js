@@ -11,18 +11,13 @@
 
 const sumOfIntegers = (start, end) => {
     let sum = 0;
-    if (start < end){
-        let i = start + 1;
-        while (i < end) {
-            sum +=i;
-            i++;
-        }}
-    else if(start > end){
-        let i = end + 1;
-        while (i < start) {
-            sum +=i;
-            i++;
-        }
+    if (start > end){
+        let temp = start;
+        start = end;
+        end = temp;
+    }
+    for (let i = start; i<=end; i++){
+        sum+=i
     }
   return sum;
 }

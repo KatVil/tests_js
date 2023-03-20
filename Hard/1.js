@@ -14,14 +14,20 @@
 const validTriangle = (a, b, c) => {
     if (a + b >= c) {
         if (b + c >= a)
-            if (a + c >= c)
-                return(true);
+            if ((a + c >= b)&&(a!=0)&&(b!=0)&&(c!=0)){
+                return true;
     }
-            else {
+    /* else if ((a===0)||(b===0)||(c===0)){
                 return(false);
             }
+            
+            else if ((a===0)&&(b===0)&&(c===0)){
+                return(false);
+            }*/
+    return false;
+}
 }
 
-console.log(validTriangle(1,4,5))
+console.log(validTriangle(6,2,8))
 
 module.exports = validTriangle
